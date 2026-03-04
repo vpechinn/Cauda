@@ -1,0 +1,433 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #fcfaf7;
+  color: #2d2d2a;
+  font-weight: 400;
+}
+
+.page {
+  max-width: 1300px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.03);
+}
+
+/* Каждая страница как отдельный блок с отступами */
+.page-section {
+  padding: 3rem 2rem;
+  border-bottom: 1px solid #f0eae2;
+}
+
+.page-section:last-child {
+  border-bottom: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  /* font-family: "Poppins", sans-serif; */
+}
+
+h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+h2:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #b78c5a;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: #3b3b35;
+}
+
+/* хедер страницы 1 */
+.hero-block {
+  background: #f2ede7;
+  margin: -2rem -2rem 0 -2rem; /* расширение подложки */
+  padding: 3rem 2rem 2.5rem 2rem;
+  border-radius: 0 0 40px 40px;
+}
+
+.hero-text {
+  max-width: 800px;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #b78c5a;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  border-radius: 30px;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* продуктовая сетка (заглушки изображений) */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 1.5rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.product-category {
+  flex: 0 1 380px;
+  background: #fefcf9;
+  border-radius: 24px;
+  padding: 1.5rem;
+  border: 1px solid #eaded2;
+  transition: all 0.15s;
+}
+
+.product-category:hover {
+  border-color: #b78c5a;
+  background: white;
+}
+
+.product-title {
+  height: 70px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 2px dotted #dccbbc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-title span {
+  font-size: 0.9rem;
+  background: #f0e3d8;
+  padding: 0.2rem 0.8rem;
+  border-radius: 40px;
+  font-weight: 400;
+}
+
+.flavors {
+  font-size: 1.2rem;
+  color: #5e4d3a;
+  margin: 0.8rem 0 0.3rem;
+  font-weight: 500;
+}
+
+.pack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
+  margin: 0.5rem 0 0.8rem;
+  font-weight: 600;
+  color: #4f3f2f;
+}
+
+.pack-item {
+  background: #ede5db;
+  padding: 0.2rem 0.8rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+}
+
+.extra-badge {
+  background: #b78c5a20;
+  color: #865f39;
+  font-size: 0.85rem;
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  border: 1px solid #dbbc9b;
+  margin-top: 0.6rem;
+}
+
+.nutrition-banner {
+  background: #b3a48b;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3e3123;
+}
+
+.section-subtitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+}
+
+.product-image {
+  width: 340px;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* мелкие правки */
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section {
+  padding: 40px 0px;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.cards-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 18px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #e7dacd;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.icon {
+  font-size: 28px;
+}
+
+.wide {
+  min-height: 180px;
+}
+
+.full {
+  grid-column: span 2;
+}
+
+/*FOOOTER */
+
+.about {
+  background: #b78c5a;
+  padding: 60px 40px;
+  font-family: Arial, sans-serif;
+}
+
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about__left {
+  flex: 1;
+  position: relative;
+}
+
+.about__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about__text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  max-width: 450px;
+  margin-bottom: 30px;
+}
+
+.about__contacts {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.about__btn {
+  margin-top: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.about__btn:hover {
+  transform: scale(1.1);
+}
+
+.about__brand {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.about__products {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about__image {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+}
+
+@media (max-width: 1200px) {
+  .cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about__image {
+    width: 400px;
+    height: 400px;
+  }
+
+  .about__title {
+    font-size: 2rem;
+  }
+
+  .about__text {
+    font-size: 1rem;
+  }
+
+  .about__contacts {
+    font-size: 1rem;
+  }
+
+  .product-category {
+    flex: 0 1 420px;
+  }
+
+  .product-image {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+  }
+}
+
+/* Маленькие планшеты */
+@media (max-width: 900px) {
+  .cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about__image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .product-category {
+    flex: 1 1 550px;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  .pack-list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .nutrition-banner {
+    font-size: 1.4rem;
+  }
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cards-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__image {
+    display: none;
+  }
+
+  .about__title {
+    font-size: 1.5rem;
+  }
+
+  .about__text {
+    font-size: 0.6rem;
+  }
+
+  .about__contacts {
+    font-size: 0.6rem;
+  }
+
+  .product-category {
+    flex: 1 1 320px;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+}
