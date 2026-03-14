@@ -16,9 +16,9 @@ body {
   margin: 0 auto;
   background-color: white;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.03);
+  position: relative;
 }
 
-/* Каждая страница как отдельный блок с отступами */
 .page-section {
   padding: 3rem 2rem;
   border-bottom: 1px solid #f0eae2;
@@ -37,7 +37,6 @@ h1,
 h2,
 h3 {
   font-weight: 600;
-  /* font-family: "Poppins", sans-serif; */
 }
 
 h1 {
@@ -52,6 +51,7 @@ h2 {
   position: relative;
   display: inline-block;
 }
+
 h2:after {
   content: "";
   position: absolute;
@@ -68,11 +68,11 @@ h3 {
   color: #3b3b35;
 }
 
-/* хедер страницы 1 */
+/* ХЕДЕР */
 .hero-block {
-  background: #f2ede7;
-  margin: -2rem -2rem 0 -2rem; /* расширение подложки */
-  padding: 3rem 2rem 2.5rem 2rem;
+  background: #fae2c6;
+  margin: -2rem -2rem 0 -2rem;
+  padding: 6rem 2rem 2.5rem 2rem;
   border-radius: 0 0 40px 40px;
 }
 
@@ -80,9 +80,17 @@ h3 {
   max-width: 800px;
 }
 
+.logo {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: -1%;
+  right: 5%;
+}
+
 .badge {
   display: inline-block;
-  background-color: #b78c5a;
+  background-color: #c37850;
   color: white;
   font-size: 0.85rem;
   font-weight: 600;
@@ -93,92 +101,19 @@ h3 {
   text-transform: uppercase;
 }
 
-/* продуктовая сетка (заглушки изображений) */
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem 1.5rem;
-  margin-top: 2rem;
-  justify-content: space-between;
+/* КАРТОЧКИ С ПРЕИМУЩЕСТВАМИ */
+.section {
+  padding: 40px 0;
 }
 
-.product-category {
-  flex: 0 1 380px;
-  background: #fefcf9;
-  border-radius: 24px;
-  padding: 1.5rem;
-  border: 1px solid #eaded2;
-  transition: all 0.15s;
-}
-
-.product-category:hover {
-  border-color: #b78c5a;
-  background: white;
-}
-
-.product-title {
-  height: 70px;
+.section-title {
+  font-size: 2rem;
   font-weight: 700;
-  font-size: 1.2rem;
-  border-bottom: 2px dotted #dccbbc;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.product-title span {
-  font-size: 0.9rem;
-  background: #f0e3d8;
-  padding: 0.2rem 0.8rem;
-  border-radius: 40px;
-  font-weight: 400;
-}
-
-.flavors {
-  font-size: 1.2rem;
-  color: #5e4d3a;
-  margin: 0.8rem 0 0.3rem;
-  font-weight: 500;
-}
-
-.pack-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 0.8rem;
-  margin: 0.5rem 0 0.8rem;
-  font-weight: 600;
-  color: #4f3f2f;
-}
-
-.pack-item {
-  background: #ede5db;
-  padding: 0.2rem 0.8rem;
-  border-radius: 30px;
-  font-size: 0.8rem;
-}
-
-.extra-badge {
-  background: #b78c5a20;
-  color: #865f39;
-  font-size: 0.85rem;
-  padding: 0.2rem 1rem;
-  border-radius: 20px;
-  display: inline-block;
-  border: 1px solid #dbbc9b;
-  margin-top: 0.6rem;
-}
-
-.nutrition-banner {
-  background: #b3a48b;
-  border-radius: 50px;
-  padding: 1rem 2rem;
-  margin: 1.5rem 0;
+  margin-bottom: 40px;
   text-align: center;
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #3e3123;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .section-subtitle {
@@ -187,30 +122,15 @@ h3 {
   margin-bottom: 1.8rem;
 }
 
-.product-image {
-  width: 340px;
-  height: 280px;
-  object-fit: cover;
-}
-
-/* мелкие правки */
-@media (max-width: 700px) {
-  h1 {
-    font-size: 2.2rem;
-  }
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-}
-
-.section {
-  padding: 40px 0px;
-}
-
-.section-title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 40px;
+.nutrition-banner {
+  background: #ebeba1;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3e3123;
 }
 
 .cards-row {
@@ -231,7 +151,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  background: #e7dacd;
+  background: #fef2a6;
 }
 
 .card h3 {
@@ -258,10 +178,197 @@ h3 {
   grid-column: span 2;
 }
 
-/*FOOOTER */
+/* ИНГРЕДИЕНТЫ */
+.ingredients-section {
+  padding: 80px 0;
+  background: linear-gradient(to bottom, #fff, #feeda1);
+  border-bottom: 1px solid #eae1d7;
+}
 
+.title-small {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bda641;
+}
+
+.title-big {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #2d2d2a;
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.ingredients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.ingredient-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f0e4d8;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.ingredient-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(183, 140, 90, 0.1);
+  border-color: #f8e69b;
+}
+
+.ingredient-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #bda641;
+  line-height: 1.2;
+}
+
+.ingredient-desc {
+  font-size: 1.2rem;
+  color: #4a4a44;
+  line-height: 1.6;
+}
+
+/* ПРОИЗВОДСТВО */
+.production-section {
+  background: linear-gradient(135deg, #feeda1 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+  margin-top: 5rem;
+  padding-top: 2rem;
+}
+
+.production-text-block {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 40px;
+  background: white;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f0e4d8;
+  position: relative;
+  z-index: 1;
+}
+
+.production-text {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #3a3a35;
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid transparent;
+  transition:
+    border-left-color 0.3s,
+    padding-left 0.3s;
+}
+
+.production-text:hover {
+  border-left-color: #b78c5a;
+  padding-left: 25px;
+}
+
+.production-text.highlight {
+  background: linear-gradient(to right, rgba(183, 140, 90, 0.05), transparent);
+  padding: 20px 20px 20px 25px;
+  border-radius: 0 20px 20px 0;
+  font-weight: 500;
+}
+
+/* ПРОДУКТОВАЯ СЕТКА */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 1.5rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.product-category {
+  flex: 0 1 380px;
+  background: white;
+  border-radius: 24px;
+  padding: 1.5rem;
+  border: 1px solid #eaded2;
+  transition:
+    border-color 0.15s,
+    background-color 0.15s;
+}
+
+.product-category:hover {
+  border-color: #fef2a6;
+  background: #f8ecba;
+}
+
+.product-title {
+  min-height: 70px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-bottom: 2px dotted #dccbbc;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-title span {
+  font-size: 0.9rem;
+  background: #f0e3d8;
+  padding: 0.2rem 0.8rem;
+  border-radius: 40px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.flavors {
+  font-size: 1.2rem;
+  color: #5e4d3a;
+  margin: 0.8rem 0 0.3rem;
+  font-weight: 500;
+}
+
+.pack-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.8rem;
+  margin: 0.5rem 0 0.8rem;
+  font-weight: 600;
+  color: #4f3f2f;
+}
+
+.pack-item {
+  background: #ede5db;
+  padding: 0.2rem 0.8rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+}
+
+/* Картинка — только через % и aspect-ratio, без px в медиа-запросах */
+.product-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 340 / 280;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* ФУТЕР */
 .about {
-  background: #b78c5a;
+  background: #fae2c6;
   padding: 60px 40px;
   font-family: Arial, sans-serif;
 }
@@ -308,23 +415,11 @@ h3 {
   color: #fff;
   font-size: 20px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: transform 0.2s;
 }
 
 .about__btn:hover {
   transform: scale(1.1);
-}
-
-.about__brand {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-.about__products {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 }
 
 .about__image {
@@ -333,10 +428,12 @@ h3 {
   object-fit: cover;
 }
 
+/* МЕДИА-ЗАПРОСЫ */
 @media (max-width: 1200px) {
   .cards-row {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .about__image {
     width: 400px;
     height: 400px;
@@ -357,18 +454,19 @@ h3 {
   .product-category {
     flex: 0 1 420px;
   }
-
-  .product-image {
-    width: 380px;
-    height: 380px;
-    object-fit: cover;
-  }
 }
 
-/* Маленькие планшеты */
 @media (max-width: 900px) {
   .cards-row {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ingredients-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title-big {
+    font-size: 2.5rem;
   }
 
   .about__image {
@@ -381,13 +479,14 @@ h3 {
     text-align: center;
   }
 
-  .product-image {
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-  }
   .pack-list {
     justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2.2rem;
   }
 }
 
@@ -395,6 +494,7 @@ h3 {
   .nutrition-banner {
     font-size: 1.4rem;
   }
+
   .cards-row {
     grid-template-columns: 1fr;
   }
@@ -402,6 +502,23 @@ h3 {
   .cards-grid {
     display: flex;
     flex-direction: column;
+  }
+
+  .ingredients-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ingredients-section,
+  .production-section {
+    padding: 60px 0;
+  }
+
+  .title-big {
+    font-size: 2rem;
+  }
+
+  .ingredient-name {
+    font-size: 1.8rem;
   }
 
   .about__image {
@@ -412,22 +529,13 @@ h3 {
     font-size: 1.5rem;
   }
 
-  .about__text {
-    font-size: 0.6rem;
-  }
-
+  .about__text,
   .about__contacts {
-    font-size: 0.6rem;
+    font-size: 0.9rem;
   }
 
   .product-category {
-    flex: 1 1 320px;
+    flex: 1 1 100%;
     text-align: center;
-  }
-
-  .product-image {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
   }
 }
