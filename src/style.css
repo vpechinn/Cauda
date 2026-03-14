@@ -70,7 +70,7 @@ h3 {
 
 /* ХЕДЕР */
 .hero-block {
-  background: #fae2c6;
+  background: #fef2a6;
   margin: -2rem -2rem 0 -2rem;
   padding: 6rem 2rem 2.5rem 2rem;
   border-radius: 0 0 40px 40px;
@@ -368,7 +368,7 @@ h3 {
 
 /* ФУТЕР */
 .about {
-  background: #fae2c6;
+  background: #fef2a6;
   padding: 60px 40px;
   font-family: Arial, sans-serif;
 }
